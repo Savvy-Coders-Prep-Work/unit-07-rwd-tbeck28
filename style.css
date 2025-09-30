@@ -1,9 +1,57 @@
 .container {
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav {
-  display: block;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .column {
+    width: 80%;
+    float: remove;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+    
+  .nav-item {
+    padding: 10px;
+  }
+
+  .nav-item:hover {
+    transition-duration: 0.7s;
+    border: 3px solid blue;
+    padding: 25px;
+    cursor: pointer;
+  }
+  
+} 
+
+@media (orientation: portrait) {
+
+  .container {
+    background-color: #ccc;
+  }
+}
+
+@media (orientation: landscape) {
+
+  .container {
+    background-color: #eee;
+  }
+}
+
+@media (webkit-min-device-pixel-ratio: 2) {
+  
+  .column {
+    border: 2px solid red;
+  }
 }
